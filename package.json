@@ -8,7 +8,7 @@
   },
   "scripts": {
     "update:dep": "npm-check",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 0",
     "semantic-release": "semantic-release"
   },
   "author": "neilkalman@gmail.com",
