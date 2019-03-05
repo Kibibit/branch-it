@@ -2,10 +2,26 @@
   "name": "@kibibit/branch-it",
   "version": "1.0.0",
   "description": "updates branch references in package.json",
-  "main": "index.js",
+  "main": "bin/branch-it.js",
+  "bin": {
+    "branch-it": "bin/branch-it.js"
+  },
   "scripts": {
+    "update:dep": "npm-check",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "neilkalman@gmail.com",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "command-line-args": "^5.0.2",
+    "current-git-branch": "^1.1.0",
+    "find-up": "^3.0.0",
+    "fs-extra": "^7.0.1",
+    "lodash": "^4.17.11",
+    "manakin": "^0.5.2",
+    "prettyjson": "^1.2.1"
+  },
+  "devDependencies": {
+    "npm-check": "^5.9.0"
+  }
 }
