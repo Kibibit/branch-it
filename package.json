@@ -11,7 +11,8 @@
     "test": "echo \"Error: no test specified\" && exit 0",
     "semantic-release": "semantic-release",
     "contributors:add": "all-contributors add",
-    "contributors:generate": "all-contributors generate"
+    "contributors:generate": "all-contributors generate",
+    "update-branch": "node ./bin/branch-it.js"
   },
   "author": "neilkalman@gmail.com",
   "license": "MIT",
@@ -40,6 +41,7 @@
     "url": "https://github.com/Kibibit/branch-it.git"
   },
   "release": {
+    "branch": "master",
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
@@ -54,6 +56,13 @@
           "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
         }
       ]
-    ]
+    ],
+    "versionMapping": {
+      "master": "stable",
+      "develop": "next"
+    }
+  },
+  "publishConfig": {
+    "tag": "stable"
   }
 }
