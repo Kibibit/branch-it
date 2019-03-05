@@ -25,6 +25,11 @@
     "prettyjson": "^1.2.1"
   },
   "devDependencies": {
+    "@semantic-release/commit-analyzer": "^6.1.0",
+    "@semantic-release/git": "^7.0.8",
+    "@semantic-release/github": "^5.2.10",
+    "@semantic-release/npm": "^5.1.4",
+    "@semantic-release/release-notes-generator": "^7.1.4",
     "all-contributors-cli": "^6.1.2",
     "npm-check": "^5.9.0",
     "semantic-release": "^15.13.3",
@@ -33,5 +38,20 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Kibibit/branch-it.git"
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/github",
+      "@semantic-release/npm",
+      [
+        "@semantic-release/git",
+        {
+          "assets": false,
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
+    ]
   }
 }
