@@ -9,7 +9,9 @@
   "scripts": {
     "update:dep": "npm-check",
     "test": "echo \"Error: no test specified\" && exit 0",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "contributors:add": "all-contributors add",
+    "contributors:generate": "all-contributors generate"
   },
   "author": "neilkalman@gmail.com",
   "license": "MIT",
@@ -23,9 +25,10 @@
     "prettyjson": "^1.2.1"
   },
   "devDependencies": {
+    "all-contributors-cli": "^6.1.2",
     "npm-check": "^5.9.0",
-    "semantic-release-cli": "^4.1.0",
-    "semantic-release": "^15.13.3"
+    "semantic-release": "^15.13.3",
+    "semantic-release-cli": "^4.1.0"
   },
   "repository": {
     "type": "git",
