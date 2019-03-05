@@ -28,7 +28,7 @@ findUp('package.json', { cwd: process.cwd() })
   .then((pkg) => {
     pkg = pkg;
 
-    const branch = options.branch || branchName();
+    const branch = options.branch || process.env.TRAVIS_BRANCH || branchName();
 
     options.tag = options.tag || _.get(pkg, `release.versionMapping.${ branch }`);
 
