@@ -9,7 +9,6 @@
   "scripts": {
     "update:dep": "npm-check",
     "test": "echo \"Error: no test specified\" && exit 0",
-    // "travis-deploy-once": "travis-deploy-once",
     "semantic-release": "semantic-release"
   },
   "author": "neilkalman@gmail.com",
