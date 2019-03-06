@@ -59,7 +59,8 @@
     ],
     "versionMapping": {
       "master": "stable",
-      "develop": "next"
+      "develop": "next",
+      "next": "next"
     }
   },
   "publishConfig": {
