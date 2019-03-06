@@ -41,14 +41,7 @@
     "url": "https://github.com/Kibibit/branch-it.git"
   },
   "release": {
-    "branch": "master",
-    "branches": [
-      "master",
-      {
-        "name": "next",
-        "prerelease": "beta"
-      }
-    ],
+    "branch": "next",
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
@@ -66,12 +59,11 @@
     ],
     "versionMapping": {
       "master": "stable",
-      "develop": "beta",
-      "next": "beta"
+      "develop": "next",
+      "next": "next"
     }
   },
   "publishConfig": {
-    "access": "public",
-    "tag": "beta"
-  }
+    "tag": "next"
+  },
 }

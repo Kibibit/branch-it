@@ -45,7 +45,7 @@ try {
         throw new Error(`a tag was not defined by parameter or package.json for branch "${ branch }"`);
       }
 
-      console.info('updating package.json release params to:\n');
+      console.info('Updating package.json release params to:\n');
       console.log(prettyjson.render({
         'release.branch': branch,
         'publishConfig.tag': options.tag
