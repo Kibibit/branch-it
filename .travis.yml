@@ -8,8 +8,7 @@ node_js:
 notifications:
   email: false
 after_success:
-  - npm run update-branch
-  - npm run semantic-release
+  - npm run update-branch && npm run semantic-release
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
