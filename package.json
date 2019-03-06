@@ -65,8 +65,8 @@
     ],
     "versionMapping": {
       "master": "stable",
-      "develop": "next",
-      "next": "next"
+      "develop": "beta",
+      "next": "beta"
     }
   },
   "publishConfig": {
