@@ -42,6 +42,13 @@
   },
   "release": {
     "branch": "next",
+    "branches": [
+      "master",
+      {
+        "name": "next",
+        "prerelease": "beta"
+      }
+    ],
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
