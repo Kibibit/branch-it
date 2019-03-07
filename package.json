@@ -41,6 +41,18 @@
     "url": "https://github.com/Kibibit/branch-it.git"
   },
   "release": {
+    "branches": [
+      "+([1-9])?(.{+([1-9]),x}).x",
+      "master",
+      {
+        "name": "beta",
+        "prerelease": true
+      },
+      {
+        "name": "next",
+        "prerelease": true
+      }
+    ],
     "plugins": [
       "@semantic-release/release-notes-generator",
       "@semantic-release/github",
