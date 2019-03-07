@@ -1,6 +1,6 @@
 {
   "name": "@kibibit/branch-it",
-  "version": "1.3.0",
+  "version": "1.3.0-next.1",
   "description": "updates branch references in package.json",
   "main": "bin/branch-it.js",
   "bin": {
@@ -27,13 +27,13 @@
   },
   "devDependencies": {
     "@semantic-release/commit-analyzer": "^6.1.0",
-    "@semantic-release/git": "^7.0.8",
+    "@semantic-release/git": "^7.1.0-beta.3",
     "@semantic-release/github": "^5.2.10",
     "@semantic-release/npm": "^5.1.4",
     "@semantic-release/release-notes-generator": "^7.1.4",
     "all-contributors-cli": "^6.1.2",
     "npm-check": "^5.9.0",
-    "semantic-release": "^15.13.3",
+    "semantic-release": "^16.0.0-beta.18",
     "semantic-release-cli": "^4.1.0"
   },
   "repository": {
@@ -41,9 +41,19 @@
     "url": "https://github.com/Kibibit/branch-it.git"
   },
   "release": {
-    "branch": "master",
+    "branches": [
+      "+([1-9])?(.{+([1-9]),x}).x",
+      "master",
+      {
+        "name": "beta",
+        "prerelease": true
+      },
+      {
+        "name": "next",
+        "prerelease": true
+      }
+    ],
     "plugins": [
-      "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
       "@semantic-release/github",
       "@semantic-release/npm",
@@ -59,10 +69,11 @@
     ],
     "versionMapping": {
       "master": "stable",
-      "develop": "next"
+      "develop": "next",
+      "next": "next"
     }
   },
   "publishConfig": {
-    "tag": "stable"
+    "tag": "next"
   }
 }

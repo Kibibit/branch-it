@@ -7,9 +7,18 @@ node_js:
   - "8.3"
 notifications:
   email: false
-after_success:
-  - npm run update-branch
-  - npm run semantic-release
+script:
+  - npm run test
+
+# after_success:
+#   - npm run codecov
+
+jobs:
+  include:
+    - stage: release
+      node_js: lts/*
+      script:
+        - npm run update-branch && npm run semantic-release
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
