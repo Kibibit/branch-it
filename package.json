@@ -1,6 +1,6 @@
 {
   "name": "@kibibit/branch-it",
-  "version": "1.3.0-beta.2",
+  "version": "1.3.0-next.1",
   "description": "updates branch references in package.json",
   "main": "bin/branch-it.js",
   "bin": {
